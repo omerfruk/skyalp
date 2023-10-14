@@ -1,0 +1,175 @@
+<template>
+  <div class="napolyon-slider">
+    <b-container>
+      <ssr-carousel
+        v-if="$device.isDesktop"
+        v-model="page"
+        :slides-per-page="1"
+        :peek-right="260"
+      >
+        <div class="slide">
+          <img
+            :src="imageURL + 'napolyon-large.png'"
+            width="760"
+            height="520"
+            alt="duude-image"
+          />
+        </div>
+        <div class="slide">
+          <img
+          :src="imageURL + 'napolyon-large-2.png'"
+            width="760"
+            height="520"
+            alt="duude-image"
+          />
+        </div>
+      </ssr-carousel>
+      <ssr-carousel
+        v-if="$device.isMobile"
+        v-model="page"
+        :slides-per-page="1"
+        :peek-right="40"
+      >
+        <div class="slide">
+          <img
+          :src="imageURL + 'napolyon-large.png'"
+            width="320"
+            height="206"
+            alt="duude-image"
+          />
+        </div>
+        <div class="slide">
+          <img
+          :src="imageURL + 'napolyon-large-2.png'"
+            width="300"
+            height="206"
+            alt="duude-image"
+          />
+        </div>
+      </ssr-carousel>
+
+      <button class="slider-button" @click="page++">
+        <span class="material-symbols-outlined"> east </span>
+      </button>
+      <div class="text-part rubik-family">
+        <div class="text-left">
+          <p class="napolyon-text">Napolyon</p>
+          <p class="loyality-text">{{ $t("loyalityFocused") }}</p>
+          <a class="view-product" href="https://napolyon.com/#/" target="_blank">{{ $t("viewProduct") }}
+            <span class="material-symbols-outlined"> north_east </span>
+          </a>
+
+        </div>
+        <div class="text-right">
+          <p class="company-text">{{ $t("napolyonCompanyText") }}</p>
+        </div>
+      </div>
+    </b-container>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      page: 0,
+      imageURL: process.env.baseImgUrl
+    };
+  },
+};
+</script>
+
+<style lang="scss">
+.napolyon-slider {
+  position: relative;
+  img{
+    border-radius: 15px;
+  }
+
+  .text-part {
+    display: flex;
+    justify-content: flex-start;
+    justify-content: space-between;
+    color: #1c1f22;
+    margin: 50px 0;
+    @media only screen and (max-width: 640px) {
+      flex-direction: column;
+    }
+    .text-left {
+      .napolyon-text {
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 61px;
+        margin-bottom: 32px;
+        @media only screen and (max-width: 640px) {
+          font-size: 24px;
+          line-height: 30px;
+          margin: 24px 0;
+        }
+      }
+      .loyality-text {
+        font-size: 32px;
+        font-weight: 450;
+        line-height: 42px;
+        margin-bottom: 32px;
+        width: 75%;
+        @media only screen and (max-width: 640px) {
+          font-size: 18px;
+          line-height: 26px;
+         
+        }
+      }
+      .view-product {
+      font-size: 24px;
+      font-weight: 450;
+      line-height: 42px;
+      color: #d73828;
+      @media only screen and (max-width: 640px) {
+          font-size: 18px;
+          line-height: 26px;
+        }
+      span{
+        vertical-align: middle;
+       font-size: 22px;
+        margin-left: 5px;
+      }
+    }
+    }
+    .text-right {
+      width: 75%;
+      @media only screen and (max-width: 640px) {
+        width: 100%;
+      }
+      .company-text {
+        font-size: 24px;
+        font-weight: 450;
+        line-height: 38px;
+        text-align: left;
+        @media only screen and (max-width: 640px) {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 24px;
+        margin-top: 45px;
+      }
+      }
+    }
+  }
+  .slider-button {
+    position: absolute;
+    top: 300px;
+    right: 300px;
+    z-index: 999999;
+    @media only screen and (max-width: 640px) {
+      left: 75px;
+      top: 80px;
+    }
+    .material-symbols-outlined {
+      color: white;
+      border: 1px solid white;
+      padding: 20px;
+      border-radius: 100px;
+      font-size: 32px;
+    }
+  }
+}
+</style>

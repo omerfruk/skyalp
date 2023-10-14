@@ -1,0 +1,160 @@
+<template>
+    <div>
+      <div class="pdf-content-detail">
+        <button class="pdf-button" @click="toggleCollapse">
+          <span v-if="isCollapsed" class="material-symbols-outlined"> expand_less </span>
+          <span v-else class="material-symbols-outlined">
+            expand_more
+          </span>
+          2013 Olağan Genel Kurul
+        </button>
+        <div class="pdf-content-detail" v-if="isCollapsed">
+          <button class="pdf-button" @click="pdfOne()">
+            <img
+              :src="imageURL + 'pdf-icon.svg'"
+              alt="pdf-icon"
+              width="21"
+              height="24"
+            />
+            2013 Olağan Genel Kurul Toplantı Tutanağı
+          </button>
+          <button class="pdf-button" @click="pdfTwo()">
+            <img
+              :src="imageURL + 'pdf-icon.svg'"
+              alt="pdf-icon"
+              width="21"
+              height="24"
+            />
+        2013 Yılı Kar Dağıtım Tablosu
+          </button>
+          <button class="pdf-button" @click="pdfThree()">
+            <img
+              :src="imageURL + 'pdf-icon.svg'"
+              alt="pdf-icon"
+              width="21"
+              height="24"
+            />
+            2013 Yılı Kar Dağıtım Teklifi
+          </button>
+          <button class="pdf-button" @click="pdfFour()">
+            <img
+              :src="imageURL + 'pdf-icon.svg'"
+              alt="pdf-icon"
+              width="21"
+              height="24"
+            />
+            Gündem
+          </button>
+          <button class="pdf-button" @click="pdfFive()">
+            <img
+              :src="imageURL + 'pdf-icon.svg'"
+              alt="pdf-icon"
+              width="21"
+              height="24"
+            />
+            Hazır Bulunanlar Listesi
+          </button>
+          <button class="pdf-button" @click="pdfSix()">
+            <img
+              :src="imageURL + 'pdf-icon.svg'"
+              alt="pdf-icon"
+              width="21"
+              height="24"
+            />
+            İlan Metni
+          </button>
+          <button class="pdf-button" @click="pdfSeven()">
+            <img
+              :src="imageURL + 'pdf-icon.svg'"
+              alt="pdf-icon"
+              width="21"
+              height="24"
+            />
+            Vekaletname
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </template>
+  
+  <script>
+  export default {
+    data() {
+      return {
+        imageURL: process.env.baseImgUrl,
+        isCollapsed: false,
+      };
+    },
+    methods: {
+      toggleCollapse() {
+        this.isCollapsed = !this.isCollapsed;
+      },
+      pdfOne() {
+        const pdfUrl =
+          "https://cdn.napolyon.com/skyalp/images/olagan-genel-kurul-toplanti-tutanagi-2013.pdf";
+  
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.target = "_blank";
+        link.download = "olagan-genel-kurul-toplantisi-2013.pdf";
+        link.click();
+      },
+      pdfTwo() {
+        const pdfUrl =
+          "https://cdn.napolyon.com/skyalp/images/2013-yili-kar-dagitim-tablosu.pdf";
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.target = "_blank";
+        link.download = "2013-yili-kar-dagitim-tablosu.pdf";
+        link.click();
+      },
+      pdfThree() {
+        const pdfUrl =
+          "https://cdn.napolyon.com/skyalp/images/2013-yili-kar-dagitim-teklifi.pdf";
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.target = "_blank";
+        link.download = "2013-yili-kar-dagitim-teklifi.pdf";
+        link.click();
+      },
+      pdfFour() {
+        const pdfUrl =
+          "https://cdn.napolyon.com/skyalp/images/gundem.pdf";
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.target = "_blank";
+        link.download = "gundem.pdf";
+        link.click();
+      },
+      pdfFive() {
+        const pdfUrl =
+          "https://cdn.napolyon.com/skyalp/images/hazir-bulunanlar-listesi.pdf";
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.target = "_blank";
+        link.download = "hazir-bulunanlar-listesi.pdf";
+        link.click();
+      },
+      pdfSix() {
+        const pdfUrl =
+          "https://cdn.napolyon.com/skyalp/images/ilan-metni-2013.pdf";
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.target = "_blank";
+        link.download = "ilan-metni-2013.pdf";
+        link.click();
+      },
+      pdfSeven() {
+        const pdfUrl =
+          "https://cdn.napolyon.com/skyalp/images/vekaletname-2013.pdf";
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.target = "_blank";
+        link.download = "vekaletname-2013.pdf";
+        link.click();
+      }
+    
+    },
+  };
+  </script>

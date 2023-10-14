@@ -1,0 +1,102 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+button
+{
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+a {
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+.rubik-family {
+  font-family: "Rubik";
+  font-style: normal;
+}
+.title-red-content {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 50px;
+  color: #d73828;
+}
+.main-page-button {
+  background-color: white;
+  color: #333538;
+  font-family: Circular Std;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  border: 2px solid #333538;
+  border-radius: 8px;
+  padding: 16px 24px;
+}
+.white-overlay {
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 999999;
+}
+.circular-family {
+  font-family: "Circular Std";
+  font-style: normal;
+}
+.inner-page-title {
+  color: #000;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 61px;
+  margin-bottom: 40px;
+  @media only screen and (max-width: 640px) {
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 55px;
+  }
+}
+.exact-active-link.active-link {
+  color: #f0be57 !important;
+  font-weight: 700 !important;
+}
+.swiper-container {
+  padding: 10px 0;
+}
+.active-link {
+  color: #f0be57;
+}
+.active-link-yellow {
+  color: #f0be57 !important;
+}
+.new-black-overlay {
+  background: radial-gradient(50% 50% at 50% 50%, rgba(167, 185, 210, 0) 0%, rgba(22, 28, 36, 0.25) 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 999999;
+ 
+}
+
