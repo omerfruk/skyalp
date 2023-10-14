@@ -2,7 +2,7 @@
   <section class="investor-relations">
     <div>
       <innerPageBackground
-      v-if="$route.fullPath.includes($t('tr'))" 
+      v-if="$route.fullPath.includes($t('tr'))"
         :text1="'Yatırımcı'"
         :text2="'İlişkileri'"
       />
@@ -65,6 +65,6 @@ export default {
   }
   }
 
-  
+
 }
 </style>

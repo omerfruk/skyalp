@@ -79,14 +79,14 @@ export default {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
-    @media only screen and (max-width: 640px) {
+    @media only screen and (max-width: 1200px) {
       display: block;
       flex-wrap: nowrap;
       gap: 0;
     }
     .card-content {
       width: 31%;
-      @media only screen and (max-width: 640px) {
+      @media only screen and (max-width: 1200px) {
         width: 100%;
         margin-bottom: 30px;
       }

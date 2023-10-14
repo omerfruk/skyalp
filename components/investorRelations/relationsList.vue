@@ -61,7 +61,7 @@ export default {
  .list-detail{
     display: flex;
     flex-wrap: wrap;
-    @media only screen and (max-width: 640px) {
+    @media only screen and (max-width: 1200px) {
          flex-direction: column;
          flex-wrap: nowrap;
         }
@@ -69,12 +69,12 @@ export default {
         width: 33%;
         &:nth-child(-n+3){
           margin-bottom: 80px;
-          @media only screen and (max-width: 640px) {
+          @media only screen and (max-width: 1200px) {
          margin-bottom: 0;
         }
         }
 
-        @media only screen and (max-width: 640px) {
+        @media only screen and (max-width: 1200px) {
          width: 100%;
         }
     }

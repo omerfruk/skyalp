@@ -8,7 +8,7 @@
             <hr class="horizontal-line" />
           </div>
           <p class="investments-bold rubik-family">
-            {{ $t("ourInvestmentsText") }}
+           {{ $t("ourInvestmentsText") }}
           </p>
           <p class="investments-bold rubik-family">{{ $t("ourInvestmentsTextTwo") }}</p>
           <button @click="goInvestments()" class="main-page-button">

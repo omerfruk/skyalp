@@ -8,7 +8,7 @@
           :value="option.value"
         >
           {{ option.label }}
-        </option>  
+        </option>
       </select>
       <span class="material-symbols-outlined"> expand_more </span>
     </div>
@@ -127,7 +127,7 @@ export default {
 .side-menu-content {
   display: flex;
   justify-content: space-between;
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 840px) {
     flex-direction: column;
   }
   .side-menu-list {
@@ -152,8 +152,8 @@ export default {
       padding: 14px;
       margin-bottom: 30px;
       border: 1px solid #d0d5dd;
-      background-color: #fff; 
-      color: #1c1f22; 
+      background-color: #fff;
+      color: #1c1f22;
       font-size: 16px;
       box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
       appearance: none;

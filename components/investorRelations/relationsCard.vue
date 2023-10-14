@@ -3,8 +3,7 @@
     <nuxt-link :to="relations.link">
     <img
       :src="relations.image"
-      width="320"
-      height="200"
+      class="mobile-image"
       alt="investor-relations"
     />
     <p class="relations-header">
@@ -25,6 +24,17 @@ export default {
 };
 </script>
 <style lang="scss">
+.mobile-image {
+  object-fit: contain;
+  object-position: left ;
+  width: 100%;
+  height: 200px;
+  @media only screen and (max-width: 1200px) {
+   object-fit: cover;
+    height: 300px;
+  }
+}
+
 .relations-card-content {
   .relations-header {
     color: #1c1f22;

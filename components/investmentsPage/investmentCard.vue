@@ -1,11 +1,13 @@
 <template>
   <div class="invest-card rubik-family">
-    <img v-if="$device.isDesktop" width="340" height="380" :src="list.image" alt="invest" />
-    <img v-else-if="$device.isMobile" width="340" height="380" :src="list.image" alt="invest" />
+    <img class="isDesktop" width="340" height="380" :src="list.image" alt="invest" />
+    <img class="isMobile"
+         style="width: 100%; object-fit: contain"
+         height="380" :src="list.image" alt="invest" />
     <p class="little-title">{{ list.littleTitle }}</p>
     <p class="header-title">{{ list.header }}</p>
     <p class="card-exp">{{ truncatedDescription }}
-    
+
     </p>
     <p v-if="(!isTruncated || list.description.length < 200) && list.italicText" class="italic-text">{{ list.italicText }}</p>
     <div class="card-bottom-content">
@@ -58,10 +60,27 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.isMobile{
+  display: none;
+  @media only screen and (max-width: 1200px) {
+    display: block;
+  }
+}
+.isDesktop{
+  display: block;
+  @media only screen and (max-width: 1200px) {
+    display: none;
+  }
+}
 .invest-card {
   margin-right: 5px;
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 1200px) {
     margin-bottom: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .little-title {
     font-size: 14px;

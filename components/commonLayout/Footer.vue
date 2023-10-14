@@ -5,7 +5,7 @@
         <div class="footer-list">
           <redLogo class="logo-content" />
           <p class="rubik-family text-content">
-            {{ $t("mainPageFooter") }} 
+            {{ $t("mainPageFooter") }}
           </p>
         </div>
         <div class="footer-list-right">
@@ -104,7 +104,7 @@ export default {
     focusElement(){
      const scrollArea = document.getElementsByClassName("who-we-are-content")
      window.scrollTo(0,scrollArea[0].clientHeight)
-     
+
     }
   }
 };
@@ -121,20 +121,20 @@ export default {
     justify-content: space-between;
     width: 100%;
     padding-bottom: 50px;
-    @media only screen and (max-width: 640px) {
+    @media only screen and (max-width: 1024px) {
       flex-direction: column;
       padding-bottom: 0;
     }
     .footer-list {
       width: 50%;
       margin-right: 25px;
-      @media only screen and (max-width: 640px) {
+      @media only screen and (max-width: 1024px) {
         width: 100%;
         margin-right: 0;
       }
       .logo-content {
         margin-bottom: 22px;
-        @media only screen and (max-width: 640px) {
+        @media only screen and (max-width: 1024px) {
           margin-bottom: 48px;
         }
       }
@@ -143,7 +143,7 @@ export default {
         font-weight: 400;
         line-height: 52px;
         color: #1c1f22;
-        @media only screen and (max-width: 640px) {
+        @media only screen and (max-width: 1024px) {
           margin-bottom: 48px;
         }
       }
@@ -151,13 +151,13 @@ export default {
     .footer-list-right {
       display: flex;
       justify-content: space-between;
-      @media only screen and (max-width: 640px) {
+      @media only screen and (max-width: 1024px) {
         width: 100%;
         flex-direction: column;
       }
       .content-detail {
         width: 30%;
-        @media only screen and (max-width: 640px) {
+        @media only screen and (max-width: 1024px) {
           width: 100%;
           margin-bottom: 48px;
         }

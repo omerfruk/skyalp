@@ -2,10 +2,10 @@
   <div class="napolyon-slider">
     <b-container>
       <ssr-carousel
-        v-if="$device.isDesktop"
+       class="isDesktop"
         v-model="page"
         :slides-per-page="1"
-        :peek-right="260"
+        :peek-right="320"
       >
         <div class="slide">
           <img
@@ -25,32 +25,32 @@
         </div>
       </ssr-carousel>
       <ssr-carousel
-        v-if="$device.isMobile"
+        class="isMobile"
         v-model="page"
         :slides-per-page="1"
-        :peek-right="40"
+        :peek-right="100"
       >
         <div class="slide">
           <img
           :src="imageURL + 'napolyon-large.png'"
-            width="320"
-            height="206"
+          style="width: 100%; object-fit: cover"
+          height="433"
             alt="duude-image"
           />
         </div>
         <div class="slide">
           <img
           :src="imageURL + 'napolyon-large-2.png'"
-            width="300"
-            height="206"
+          style="width: 100%; object-fit: cover"
+          height="433"
             alt="duude-image"
           />
         </div>
       </ssr-carousel>
 
-      <button class="slider-button" @click="page++">
-        <span class="material-symbols-outlined"> east </span>
-      </button>
+<!--      <button class="slider-button" @click="page++">-->
+<!--        <span class="material-symbols-outlined"> east </span>-->
+<!--      </button>-->
       <div class="text-part rubik-family">
         <div class="text-left">
           <p class="napolyon-text">Napolyon</p>
@@ -80,6 +80,19 @@ export default {
 </script>
 
 <style lang="scss">
+.isMobile{
+  display: none;
+  @media only screen and (max-width: 1200px) {
+    display: block;
+  }
+}
+.isDesktop{
+  display: block;
+  @media only screen and (max-width: 1200px) {
+    display: none;
+  }
+}
+
 .napolyon-slider {
   position: relative;
   img{
@@ -116,7 +129,7 @@ export default {
         @media only screen and (max-width: 640px) {
           font-size: 18px;
           line-height: 26px;
-         
+
         }
       }
       .view-product {

@@ -47,7 +47,7 @@ export default {
   .card-style {
     display: flex;
     gap: 24px;
-    @media only screen and (max-width: 640px) {
+    @media only screen and (max-width: 1200px) {
       display: block;
       flex-wrap: nowrap;
     }

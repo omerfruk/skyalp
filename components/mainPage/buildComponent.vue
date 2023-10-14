@@ -13,8 +13,7 @@
             <span class="material-symbols-outlined"> chevron_right </span>
           </button>
         </div>
-
-        <buildSlider /> 
+        <buildSlider/>
       </div>
     </b-container>
   </div>
@@ -37,14 +36,16 @@ export default {
     display: flex !important;
     justify-content: space-between;
     width: 100%;
-    @media only screen and (max-width: 640px) {
+    @media only screen and (max-width: 1200px) {
       flex-direction: column;
+
     }
     .text-content {
       width: 40%;
       margin-right: 30px;
-      @media only screen and (max-width: 640px) {
+      @media only screen and (max-width: 1200px) {
         width: 100%;
+        margin-bottom: 24px;
       }
       .build-text-part {
         .horizontal-line {
